@@ -1,0 +1,6 @@
+#!/bin/sh
+
+setxkbmap pt &
+VBoxClient-all &
+nitrogen --restore
+export EDITOR=vim
