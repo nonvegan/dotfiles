@@ -1,6 +1,7 @@
 #!/bin/sh
 
 setxkbmap pt &
-VBoxClient-all &
-nitrogen --restore
-export EDITOR=vim
+nitrogen --restore &
+picom &
+export EDITOR=vim BROWSER=firefox
+

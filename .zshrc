@@ -82,6 +82,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+ I3_UPTIME=$(ps -o etimes -p $(pgrep i3) | head -n2 | tail -n1)
+ if [[ "$I3_UPTIME" -lt 2 ]]
+ then
+   neofetch
+ fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -107,3 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias oc="rlwrap ocaml"
+alias lah="ls -lah --color=auto"
+alias lock="loginctl lock-session"
+alias screenshots="ranger ~/Pictures/Screenshots"
+alias sss=screenshots
