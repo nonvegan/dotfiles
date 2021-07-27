@@ -112,7 +112,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias oc="rlwrap ocaml"
+alias pl="swipl"
+alias js="node"
 alias lah="ls -lah --color=auto"
 alias lock="loginctl lock-session"
 alias screenshots="ranger ~/Pictures/Screenshots"
 alias sss=screenshots
+alias oaur="exec firefox -url https://aur.archlinux.org/packages/"
+alias oar="exec firefox -url https://archlinux.org/packages/"
