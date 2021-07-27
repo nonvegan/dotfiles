@@ -1,0 +1,8 @@
+! Natural Scrolling
+pointer = 1 2 3 5 4 6 7 8 9 10
+
+! Mac-like grave and tilde placement
+!keycode 94 = grave asciitilde grave notsign bar bar
+
+! Greek
+!keycode 49 = dead_greek section

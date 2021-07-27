@@ -4,11 +4,15 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set smartindent
 
+set splitbelow
+set splitright
+
 set nu relativenumber
 set incsearch nohlsearch
 set expandtab
 set guicursor=
-set nowrap
+set wrap
+set so=8
 set noerrorbells
 set ruler
 
@@ -20,11 +24,13 @@ set scrolloff=8
 
 set wildmenu
 set cmdheight=1
-map Y y$
+set noshowmode
 
 set updatetime=50
 set mouse=a
 set confirm
+
+map Y y$
 
 nnoremap <A-Up> :m-2<CR>
 nnoremap <A-Down> :m+<CR>
@@ -36,10 +42,11 @@ if has("autocmd")
 endif
 
 call plug#begin('~/.vim/plugged')
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 let g:airline_theme='base16_snazzy'
+highlight Pmenu ctermfg=7 ctermbg=238
+highlight PmenuSel ctermfg=235 ctermbg=7

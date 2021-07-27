@@ -24,26 +24,26 @@ let s:base0F = '#b2643c' "131
 " Normal mode
 "          [ guifg , guibg , ctermfg , ctermbg , opts ]
 let s:N1 = [ s:base00 , s:base0D , 235 , 81 ]           " [ color of body and line-info ]
-let s:N2 = [ s:base0D , s:base00 , 81 , 0 ]           " [ diffcount and file-info ]
-let s:N3 = [ s:base0D , s:base00 , 81 , 0 ]           " [ filename ]
+let s:N2 = [ s:base0D , s:base00 , 81 , 235 ]           " [ diffcount and file-info ]
+let s:N3 = [ s:base0D , s:base00 , 81 , 235 ]           " [ filename ]
 let s:N4 = [ s:base0D , 81 ]                            " [ buffer modified ]
 
 " Insert mode
 let s:I1 = [ s:base00 , s:base0B , 235 , 84 ]
-let s:I2 = [ s:base0B , s:base00 , 84 , 0 ]
-let s:I3 = [ s:base0B , s:base00 , 84 , 0 ]
+let s:I2 = [ s:base0B , s:base00 , 84 , 235 ]
+let s:I3 = [ s:base0B , s:base00 , 84 , 235 ]
 let s:I4 = [ s:base0B , 84 ]
 
 " Visual mode
 let s:V1 = [ s:base00 , s:base0A , 235 , 229 ]
-let s:V2 = [ s:base0A , s:base00 , 229 , 0 ]
-let s:V3 = [ s:base0A , s:base00 , 229 , 0 ]
+let s:V2 = [ s:base0A , s:base00 , 229 , 235 ]
+let s:V3 = [ s:base0A , s:base00 , 229 , 235 ]
 let s:V4 = [ s:base0A , 229 ]
 
 " Replace mode
 let s:R1 = [ s:base00 , s:base08 , 235 , 203 ]
-let s:R2 = [ s:base08 , s:base00 , 203 , 0 ]
-let s:R3 = [ s:base08 , s:base00 , 203 , 0 ]
+let s:R2 = [ s:base08 , s:base00 , 203 , 235 ]
+let s:R3 = [ s:base08 , s:base00 , 203 , 235 ]
 let s:R4 = [ s:base08 , 203 ]
 
 " Paste mode
@@ -62,7 +62,7 @@ let g:airline#themes#base16_snazzy#palette.accents = {
       \ }
 
 let ER = [ s:base00 , s:base08 , 235 , 203 ]      " [ error color ]
-let WI = [ s:base00 , s:base0A , 235 , 7 ]      " [ warning color ] -> right rect
+let WI = [ s:base00 , s:base0A , 235 , 7 ]      " [ warning color ]
 
 let g:airline#themes#base16_snazzy#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 let g:airline#themes#base16_snazzy#palette.normal_modified = {
