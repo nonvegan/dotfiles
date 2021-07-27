@@ -47,6 +47,7 @@ set undodir=~/.vim/undodir
 " Keybinds
 let mapleader=" "
 map Y y$
+nmap <Leader>d <plug>(YCMHover)
 nmap <Leader>q :YcmCompleter GoToInclude<CR>
 nmap <Leader>w :YcmCompleter GoToDeclaration<CR>
 nmap <Leader>e :YcmCompleter GoToDefinition<CR>
