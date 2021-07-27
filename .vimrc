@@ -43,7 +43,13 @@ set undofile
 set undodir=~/.vim/undodir
 
 " Keybinds
+let mapleader=" "
 map Y y$
+nmap <Leader>q :YcmCompleter GoToInclude<CR>
+nmap <Leader>w :YcmCompleter GoToDeclaration<CR>
+nmap <Leader>e :YcmCompleter GoToDefinition<CR>
+nmap <Leader>r :YcmCompleter GoToImplementation<CR>
+nmap <Leader>f :YcmCompleter Format<CR>
 nnoremap <A-Up> :m-2<CR>
 nnoremap <A-Down> :m+<CR>
 inoremap <A-Up> <Esc>:m-2<CR>
@@ -56,7 +62,9 @@ if has("autocmd")
 endif
 
 " Auto-Completion
+set completeopt-=preview " autocmd CompleteDone * pclose
 set pumheight=16
-set completeopt-=preview "Close preview after done writing -> autocmd CompleteDone * pclose
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_auto_trigger = 0
+let g:ycm_auto_hover = 1
+let b:ycm_hover = { 'command': 'GetDoc', 'syntax': &filetype }
