@@ -1,6 +1,7 @@
 " Theming
 syntax on 
 let g:airline_theme='base16_snazzy'
+let g:airline_powerline_fonts = 1
 highlight Pmenu ctermfg=7 ctermbg=18
 highlight PmenuSel ctermfg=235 ctermbg=7
 
@@ -9,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " General
