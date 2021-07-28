@@ -7,10 +7,12 @@ highlight PmenuSel ctermfg=235 ctermbg=7
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ycm-core/YouCompleteMe'
-Plug 'tpope/vim-fugitive'
+ Plug 'vim-airline/vim-airline'
+ Plug 'vim-airline/vim-airline-themes'
+ Plug 'ycm-core/YouCompleteMe'
+ Plug 'tpope/vim-fugitive'
+ Plug 'tpope/vim-commentary'
+ Plug 'tommcdo/vim-exchange'
 call plug#end()
 
 " General
@@ -51,14 +53,13 @@ nmap <Leader>d <plug>(YCMHover)
 nmap <Leader>q :YcmCompleter GoToInclude<CR>
 nmap <Leader>w :YcmCompleter GoToDeclaration<CR>
 nmap <Leader>e :YcmCompleter GoToDefinition<CR>
-nmap <Leader>r :YcmCompleter GoToImplementation<CR>
+nmap <Leader>r :YcmCompleter GoToReferences<CR>
+nmap <Leader>i :YcmCompleter GoToImplementation<CR>
 nmap <Leader>f :YcmCompleter Format<CR>
 nnoremap <A-Up> :m-2<CR>
 nnoremap <A-Down> :m+<CR>
-inoremap <A-Up> <Esc>:m-2<CR>
-inoremap <A-Down> <Esc>:m+<CR>
 
-" Misc
+" AutoCmd
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
   au FileType * setlocal formatoptions-=cro
