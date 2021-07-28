@@ -47,6 +47,7 @@ set undofile
 set undodir=~/.vim/undodir
 
 " Keybinds
+set ttimeoutlen=0 " Fixes <ESC> delay using YCM
 let mapleader=" "
 map Y y$
 nmap <Leader>d <plug>(YCMHover)
@@ -58,7 +59,6 @@ nmap <Leader>i :YcmCompleter GoToImplementation<CR>
 nmap <Leader>f :YcmCompleter Format<CR>
 nnoremap <A-Up> :m-2<CR>
 nnoremap <A-Down> :m+<CR>
-
 " AutoCmd
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
