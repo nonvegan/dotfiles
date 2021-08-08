@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'tpope/vim-fugitive'
  Plug 'tpope/vim-commentary'
  Plug 'tommcdo/vim-exchange'
+ Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 " General
@@ -47,18 +48,24 @@ set undofile
 set undodir=~/.vim/undodir
 
 " Keybinds
-set ttimeoutlen=0 " Fixes <ESC> delay using YCM
 let mapleader=" "
+
 map Y y$
+
+set ttimeoutlen=0 " Fixes <ESC> delay using YCM
 nmap <Leader>d <plug>(YCMHover)
 nmap <Leader>q :YcmCompleter GoToInclude<CR>
 nmap <Leader>w :YcmCompleter GoToDeclaration<CR>
 nmap <Leader>e :YcmCompleter GoToDefinition<CR>
 nmap <Leader>r :YcmCompleter GoToReferences<CR>
 nmap <Leader>i :YcmCompleter GoToImplementation<CR>
-nmap <Leader>f :YcmCompleter Format<CR>
-nnoremap <A-Up> :m-2<CR>
-nnoremap <A-Down> :m+<CR>
+nmap <Leader>f :Autoformat<CR>
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap <C-k> :m .-2<CR>==
+nnoremap <C-j> :m .+1<CR>==
+
 " AutoCmd
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
