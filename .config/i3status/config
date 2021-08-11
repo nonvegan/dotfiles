@@ -30,13 +30,13 @@ volume master {
 }
 
 wireless _first_ {
-        format_up = "W: %essid%quality"
-        format_down = "W: down"
+        format_up = "W: Up"
+        format_down = "W: Down"
 }
 
 ethernet _first_ {
         format_up = "E: %speed"
-        format_down = "E: down"
+        format_down = "E: Down"
 }
 
 battery all {
