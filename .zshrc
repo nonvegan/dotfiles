@@ -82,6 +82,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+ # Neofetch greeter
  I3_UPTIME=$(ps -o etimes -p $(pgrep i3) | head -n2 | tail -n1)
  if [[ "$I3_UPTIME" -lt 2 ]]
  then
