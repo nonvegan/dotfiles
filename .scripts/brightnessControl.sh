@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# @https://gist.github.com/Blaradox/030f06d165a82583ae817ee954438f2e
+
 # You can call this script like this:
 # $ ./brightnessControl.sh up
 # $ ./brightnessControl.sh down
