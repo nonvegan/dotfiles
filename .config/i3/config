@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-bindsym $mod+t exec firefox # ;layout tabbed
+bindsym $mod+t exec firefox
 
 # i3 config file (v4)
 #
@@ -45,7 +45,13 @@ bindsym $mod+Escape exec --no-startup-id loginctl lock-session
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
+
+# start thunderbird
+bindsym $mod+n exec thunderbird
+
+#start spotify
+bindsym $mod+m exec spotify
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -185,7 +191,7 @@ bindsym XF86MonBrightnessUp exec ~/.scripts/brightnessControl.sh up
 #bindsym XF86PowerOff  exec --no-startup-id i3lock
 #bindsym XF86LogOff   exec --no-startup-id i3lock
 
-smart_borders on
+# smart_borders on
 gaps inner 12
 gaps outer -2
 for_window [class=".*"] border pixel 2
@@ -215,13 +221,13 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id $volumepath/volume -n -t $stat
 bindsym XF86AudioLowerVolume exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig down $volumestep
 bindsym XF86AudioMute        exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig mute
 
-bindsym $mod+x exec --no-startup-id kitty -e ranger
-bindsym $mod+F2 exec --no-startup-id kitty -e nmtui
-bindsym $mod+F12 exec --no-startup-id kitty -e alsamixer
+bindsym $mod+x exec --no-startup-id alacritty -e ranger
+bindsym $mod+F2 exec --no-startup-id alacritty -e nmtui
+bindsym $mod+F12 exec --no-startup-id alacritty -e alsamixer
 
 bindsym Print exec flameshot screen -p ~/Pictures/Screenshots
 bindsym Shift+Print exec flameshot gui -p ~/Pictures/Screenshots
 
-exec --no-startup-id kitty
-assign [class="kitty"] $ws1
+exec --no-startup-id alacritty
+assign [class="alacritty"] $ws1
 
