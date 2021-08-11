@@ -1,5 +1,10 @@
 " Theming
 syntax on 
+colorscheme elflord
+highlight Special term=bold ctermfg=224
+highlight link Repeat Statement
+highlight! link Operator Statement
+
 let g:airline_theme='base16_snazzy'
 let g:airline_powerline_fonts = 1
 highlight Pmenu ctermfg=7 ctermbg=18
@@ -61,8 +66,8 @@ nmap <Leader>r :YcmCompleter GoToReferences<CR>
 nmap <Leader>i :YcmCompleter GoToImplementation<CR>
 nmap <Leader>f :Autoformat<CR>
 
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 nnoremap <C-k> :m .-2<CR>==
 nnoremap <C-j> :m .+1<CR>==
 
