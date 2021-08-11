@@ -150,7 +150,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 18.0
+  # size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -296,7 +296,7 @@ colors:
   # Example:
   #   `- { index: 16, color: '#ffffff' }`
   #
-  indexed_colors: [{ index: 18, color: '#ffffff' }]
+  indexed_colors: [{ index: 18, color: '#383e4a' }]
 
 # Bell
 #
