@@ -124,3 +124,4 @@ alias screenshots="ranger ~/Pictures/Screenshots"
 alias sss=screenshots
 alias oaur="exec firefox -url https://aur.archlinux.org/packages/"
 alias oar="exec firefox -url https://archlinux.org/packages/"
+alias sn="shutdown now"
