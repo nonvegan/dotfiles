@@ -57,7 +57,7 @@ bindsym $mod+m exec spotify
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu "dmen_run -i -p 'Arch Linux' -fn 'Ubuntu Mono:bold:pixelsize=16' -nb '#21252b' -nf '#eeeeee'"
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu "dmenu -i -p 'Arch Linux' -fn 'Ubuntu Mono:bold:pixelsize=16' -nb '#21252b' -nf '#eeeeee'"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
