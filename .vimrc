@@ -11,6 +11,7 @@ highlight Pmenu ctermfg=7 ctermbg=18
 highlight PmenuSel ctermfg=235 ctermbg=7
 
 " Plugins
+runtime ftplugin/man.vim
 call plug#begin('~/.vim/plugged')
  Plug 'vim-airline/vim-airline'
  Plug 'vim-airline/vim-airline-themes'
@@ -19,6 +20,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'tpope/vim-commentary'
  Plug 'tommcdo/vim-exchange'
  Plug 'Chiel92/vim-autoformat'
+ Plug 'jez/vim-superman'
 call plug#end()
 
 " General
@@ -30,6 +32,7 @@ set wrap
 set guicursor=
 set incsearch nohlsearch
 set noerrorbells
+set keywordprg=:Man " K to open man page -> Alongside man.vim
 
 " Identation
 set tabstop=4 softtabstop=4
