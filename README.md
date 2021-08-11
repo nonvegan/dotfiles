@@ -8,6 +8,6 @@
 - Font: [Ubuntu Mono](https://design.ubuntu.com/font)
 - Color Scheme: [Monokai Pro](https://monokai.pro)
 
-## ScreenShot
+## Screenshot
 ![ScreenShot](screenshot.png)
 
