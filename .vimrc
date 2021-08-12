@@ -32,9 +32,9 @@ set wrap
 set guicursor=
 set incsearch nohlsearch
 set noerrorbells
-set keywordprg=:Man " K to open man page -> Alongside man.vim
+set keywordprg=:Man
 
-" Identation
+" Indentation
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set smartindent
@@ -78,6 +78,7 @@ nnoremap <C-j> :m .+1<CR>==
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
   au FileType * setlocal formatoptions-=cro
+  au FileType man setlocal tabstop=8 " Fix tabs caused artifacts in man pages
 endif
 
 " Auto-Completion

@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/pedro/.oh-my-zsh"
+export PATH="$PATH:$HOME/.vim/plugged/vim-superman/bin"
 
 # Speed up WSL 
 # export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
@@ -125,3 +126,4 @@ alias sss=screenshots
 alias oaur="exec firefox -url https://aur.archlinux.org/packages/"
 alias oar="exec firefox -url https://archlinux.org/packages/"
 alias sn="shutdown now"
+alias man="vman"
