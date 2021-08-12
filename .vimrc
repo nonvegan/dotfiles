@@ -2,7 +2,7 @@
 syntax on 
 colorscheme elflord
 highlight Special term=bold ctermfg=224
-highlight link Repeat Statement
+highlight! link Repeat Statement
 highlight! link Operator Statement
 
 let g:airline_theme='base16_snazzy'
