@@ -1,5 +1,5 @@
 " Theming
-syntax on 
+syntax on
 colorscheme elflord
 highlight! Special term=bold ctermfg=224
 highlight! link Repeat Statement
@@ -60,7 +60,7 @@ set undodir=~/.vim/undodir
 let mapleader=" "
 
 map Y y$
-map <F2> <CR>:Man
+map <F2> <CR>:Man 
 map <leader>m :w<CR>:make -B<CR>
 map <C-F5> :w<CR>:make -B run<CR>
 
@@ -84,8 +84,8 @@ nnoremap <F3> msO<ESC>==`s
 nnoremap <F4> a<ESC>:.-d<CR>==gi<ESC>
 inoremap <F3> <ESC>msO<ESC>==`sa
 inoremap <F4> <ESC>:.-d<CR>==gi
-vnoremap <F3> :<BS><CR>O<ESC>gv=gvh
-vnoremap <F4> :<BS><CR>kddgv=gvh
+vnoremap <F3> :<BS><CR>O<ESC>gv=gv
+vnoremap <F4> :<BS><CR>kddgv=gv
 
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
