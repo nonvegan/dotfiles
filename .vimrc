@@ -1,7 +1,7 @@
 " Theming
 syntax on 
 colorscheme elflord
-highlight Special term=bold ctermfg=224
+highlight! Special term=bold ctermfg=224
 highlight! link Repeat Statement
 highlight! link Operator Statement
 
@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'tommcdo/vim-exchange'
  Plug 'Chiel92/vim-autoformat'
  Plug 'jez/vim-superman'
+ Plug 'preservim/nerdtree'
 call plug#end()
 
 " General
@@ -59,6 +60,9 @@ set undodir=~/.vim/undodir
 let mapleader=" "
 
 map Y y$
+map <F2> <CR>:Man
+map <leader>m :w<CR>:make -B<CR>
+map <C-F5> :w<CR>:make -B run<CR>
 
 set ttimeoutlen=0 " Fixes <ESC> delay using YCM
 nmap <Leader>d <plug>(YCMHover)
@@ -69,10 +73,26 @@ nmap <Leader>r :YcmCompleter GoToReferences<CR>
 nmap <Leader>i :YcmCompleter GoToImplementation<CR>
 nmap <Leader>f :Autoformat<CR>
 
+nnoremap <C-k> a<Esc>:m .-2<CR>==gi<ESC>
+nnoremap <C-j> a<Esc>:m .+1<CR>==gi<ESC>
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
-nnoremap <C-k> :m .-2<CR>==
-nnoremap <C-j> :m .+1<CR>==
+
+nnoremap <F3> msO<ESC>==`s
+nnoremap <F4> a<ESC>:.-d<CR>==gi<ESC>
+inoremap <F3> <ESC>msO<ESC>==`sa
+inoremap <F4> <ESC>:.-d<CR>==gi
+vnoremap <F3> :<BS><CR>O<ESC>gv=gvh
+vnoremap <F4> :<BS><CR>kddgv=gvh
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " AutoCmd
 if has("autocmd")
