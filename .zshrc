@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/pedro/.oh-my-zsh"
-export PATH="$PATH:$HOME/.vim/plugged/vim-superman/bin"
+export PATH="$PATH:$HOME/.vim/plugged/vim-superman/bin:$HOME/boomer"
 
 # Speed up WSL 
 # export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
@@ -87,11 +87,11 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
  # Neofetch greeter
- I3_UPTIME=$(ps -o etimes -p $(pgrep i3) | head -n2 | tail -n1)
- if [[ "$I3_UPTIME" -lt 2 ]]
- then
-   neofetch
- fi
+ # I3_UPTIME=$(ps -o etimes -p $(pgrep i3) | head -n2 | tail -n1)
+ # if [[ "$I3_UPTIME" -lt 2 ]]
+ # then
+ #   neofetch
+ # fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -119,6 +119,7 @@ source $ZSH/oh-my-zsh.sh
 alias oc="rlwrap ocaml"
 alias pl="swipl"
 alias js="node"
+alias scheme="racket"
 alias lah="ls -lah --color=auto"
 alias lock="loginctl lock-session"
 alias screenshots="ranger ~/Pictures/Screenshots"
@@ -127,3 +128,6 @@ alias oaur="exec firefox -url https://aur.archlinux.org/packages/"
 alias oar="exec firefox -url https://archlinux.org/packages/"
 alias sn="shutdown now"
 alias man="vman"
+alias ydl="youtube-dl"
+alias st="speedtest"
+alias horario="feh ~/Pictures/horario.png -F"
