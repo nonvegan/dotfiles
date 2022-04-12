@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'Chiel92/vim-autoformat'
  Plug 'jez/vim-superman'
  Plug 'preservim/nerdtree'
+ Plug 'zeek/vim-zeek'
 call plug#end()
 
 " General
@@ -93,6 +94,11 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+" Void buffer
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+vnoremap <leader>p "_dP
 
 " AutoCmd
 if has("autocmd")
