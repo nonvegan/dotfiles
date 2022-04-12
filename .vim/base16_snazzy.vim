@@ -62,7 +62,7 @@ let g:airline#themes#base16_snazzy#palette.accents = {
       \ }
 
 let ER = [ s:base00 , s:base08 , 235 , 203 ]      " [ error color ]
-let WI = [ s:base00 , s:base0A , 235 , 7 ]      " [ warning color ]
+let WI = [ s:base00 , s:base0A , 235 , 15 ]      " [ warning color ]
 
 let g:airline#themes#base16_snazzy#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 let g:airline#themes#base16_snazzy#palette.normal_modified = {

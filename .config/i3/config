@@ -146,6 +146,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# bindsym $mod+Ctrl+2 [workspace=$ws2] kill
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -182,6 +184,7 @@ bindsym $mod+r mode "resize"
 
 bindsym XF86MonBrightnessDown exec ~/.scripts/brightnessControl.sh down
 bindsym XF86MonBrightnessUp exec ~/.scripts/brightnessControl.sh up
+bindsym $mod+p exec --no-startup-id autorandr --cycle
 #bindsym XF86PowerDown   exec --no-startup-id i3lock
 #bindsym XF86PowerOff  exec --no-startup-id i3lock
 #bindsym XF86LogOff   exec --no-startup-id i3lock
@@ -190,6 +193,7 @@ bindsym XF86MonBrightnessUp exec ~/.scripts/brightnessControl.sh up
 gaps inner 12
 gaps outer -2
 for_window [class=".*"] border pixel 3
+bindsym --release button2 kill
 
 client.focused          #4c7899 #45a9ff #ffffff
 client.focused_inactive #333333 #5f676a #ffffff
@@ -221,10 +225,12 @@ bindsym $mod+y exec --no-startup-id thunar
 bindsym $mod+F2 exec --no-startup-id alacritty -e nmtui
 bindsym $mod+F12 exec --no-startup-id alacritty -e alsamixer
 
-bindsym Print exec flameshot screen -p ~/Pictures/Screenshots
-bindsym Shift+Print exec flameshot gui -p ~/Pictures/Screenshots
-bindsym $mod+c exec --no-startup-id ~/boomer/boomer
+bindsym Print exec flameshot full -c
+bindsym $mod+Print exec flameshot screen -p ~/Pictures/Screenshots
+bindsym Shift+Print exec flameshot gui
+bindsym $mod+c exec --no-startup-id ~/.boomer/boomer
 
 exec --no-startup-id "thunar --daemon"
+exec --no-startup-id "redshift-gtk -l 41.4:-8.3"
 exec --no-startup-id alacritty
 assign [class="alacritty"] $ws1

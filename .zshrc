@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/pedro/.oh-my-zsh"
-export PATH="$PATH:$HOME/.vim/plugged/vim-superman/bin:$HOME/boomer"
+export PATH="$PATH:$HOME/.vim/plugged/vim-superman/bin:$HOME/.boomer"
 
 # Speed up WSL 
 # export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
@@ -130,4 +130,16 @@ alias sn="shutdown now"
 alias man="vman"
 alias ydl="youtube-dl"
 alias st="speedtest"
-alias horario="feh ~/Pictures/horario.png -F"
+alias horario="exec feh ~/Pictures/horario.png -F"
+
+# LOGITECH MOUSE
+ # xinput set-prop "pointer:Logitech G305" "libinput Accel Speed" -0.60
+# SMOOTH SCROLLING
+ xinput set-button-map "ELAN1200:00 04F3:306F Touchpad" 1 2 3 5 4 6 7 8 9 10
+
+#Zeek
+function zeek-local { sudo vim /opt/zeek/share/zeek/site/local.zeek; }
+function zeek-analyse { jq -C . $1 | less -R;}
+
+#Kubectl
+[[ /usr/bin/kubectl ]] && source <(kubectl completion zsh)
