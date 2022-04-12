@@ -84,6 +84,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Fix Invisible comments zsh-syntax-highlighting
+ZSH_HIGHLIGHT_STYLES[comment]='fg=8'
+
 # User configuration
 
  # Neofetch greeter
