@@ -57,6 +57,9 @@ set nobackup
 set undofile
 set undodir=~/.vim/undodir
 
+" Clipboard support
+set clipboard=unnamedplus
+
 " Keybinds
 let mapleader=" "
 
