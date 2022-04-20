@@ -1,6 +1,6 @@
 #!/bin/sh
 
-setxkbmap pt &
 nitrogen --restore &
-picom &
+picom --experimental-backends &
+setxkbmap pt
 export EDITOR=vim BROWSER=firefox
