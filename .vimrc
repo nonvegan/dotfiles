@@ -1,10 +1,9 @@
 " Theming
 syntax on
-colorscheme elflord
+colorscheme legacy_elflord
 highlight! Special term=bold ctermfg=224
 highlight! link Repeat Statement
 highlight! link Operator Statement
-
 let g:airline_theme='base16_snazzy'
 let g:airline_powerline_fonts = 1
 highlight Pmenu ctermfg=7 ctermbg=18
@@ -23,6 +22,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'jez/vim-superman'
  Plug 'preservim/nerdtree'
  Plug 'zeek/vim-zeek'
+ Plug 'tpope/vim-surround'
 call plug#end()
 
 " General
