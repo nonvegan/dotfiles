@@ -4,10 +4,12 @@ colorscheme legacy_elflord
 highlight! Special term=bold ctermfg=224
 highlight! link Repeat Statement
 highlight! link Operator Statement
+
 let g:airline_theme='base16_snazzy'
 let g:airline_powerline_fonts = 1
 highlight Pmenu ctermfg=7 ctermbg=18
 highlight PmenuSel ctermfg=235 ctermbg=7
+highlight! link SignColumn Statement
 
 " Plugins
 runtime ftplugin/man.vim
@@ -21,8 +23,11 @@ call plug#begin('~/.vim/plugged')
  Plug 'Chiel92/vim-autoformat'
  Plug 'jez/vim-superman'
  Plug 'preservim/nerdtree'
+ Plug 'ctrlpvim/ctrlp.vim'
  Plug 'zeek/vim-zeek'
  Plug 'tpope/vim-surround'
+ Plug 'kshenoy/vim-signature'
+ " Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " General
@@ -64,6 +69,7 @@ set clipboard=unnamedplus
 let mapleader=" "
 
 map Y y$
+map <Leader>s :update<CR>
 map <F2> <CR>:Man 
 map <leader>m :w<CR>:make -B<CR>
 map <C-F5> :w<CR>:make -B run<CR>
@@ -108,6 +114,7 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
   au FileType * setlocal formatoptions-=cro
   au FileType man setlocal tabstop=8 " Fix tabs caused artifacts in man pages
+  " au QuickFixCmdPost *grep* cwindow
 endif
 
 " Auto-Completion
@@ -117,3 +124,8 @@ let g:ycm_show_diagnostics_ui = 0
 let g:ycm_auto_trigger = 0
 let g:ycm_auto_hover = 1
 let b:ycm_hover = { 'command': 'GetDoc', 'syntax': &filetype }
+
+" Searching
+let g:ctrlp_cmdmap = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
