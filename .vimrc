@@ -90,7 +90,7 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-nnoremap <F3> msO<ESC>==`s
+nnoremap <F3> msO<ESC>==`s:delmarks s<CR>
 nnoremap <F4> a<ESC>:.-d<CR>==gi<ESC>
 inoremap <F3> <ESC>msO<ESC>==`sa
 inoremap <F4> <ESC>:.-d<CR>==gi
