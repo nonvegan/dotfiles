@@ -1,6 +1,6 @@
 " Theming
 syntax on
-colorscheme elflord
+colorscheme legacy_elflord
 highlight! Special term=bold ctermfg=224
 highlight! link Repeat Statement
 highlight! link Operator Statement
@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'jez/vim-superman'
  Plug 'preservim/nerdtree'
  Plug 'zeek/vim-zeek'
+ Plug 'tpope/vim-surround'
 call plug#end()
 
 " General
