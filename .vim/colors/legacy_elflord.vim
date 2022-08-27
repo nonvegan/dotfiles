@@ -19,7 +19,7 @@ hi Statement term=bold		ctermfg=Yellow gui=bold	guifg=#aa4444
 hi PreProc	term=underline	ctermfg=LightBlue	guifg=#ff80ff
 hi Type	term=underline		ctermfg=LightGreen	guifg=#60ff60 gui=bold
 hi Function	term=bold		ctermfg=White guifg=White
-hi Repeat	term=underline	ctermfg=Yellow		guifg=white
+hi Repeat	term=underline	ctermfg=White		guifg=white
 hi Operator				ctermfg=Red			guifg=Red
 hi Ignore				ctermfg=black		guifg=bg
 hi Error	term=reverse ctermbg=Red ctermfg=White guibg=Red guifg=White
