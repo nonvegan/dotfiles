@@ -3,6 +3,7 @@
 - Window Manager: [i3](https://github.com/i3/i3)
 - Status Bar: [i3status](https://github.com/i3/i3status)
 - Display Manager: [LightDM](https://github.com/canonical/lightdm)
+- Audio Server: [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio)
 - Screen Locker: [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
 - Compositor: [picom](https://github.com/yshui/picom)
 - Program Launcher: [dmenu](https://tools.suckless.org/dmenu)
