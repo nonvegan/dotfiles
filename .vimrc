@@ -11,6 +11,8 @@ highlight Pmenu ctermfg=7 ctermbg=18
 highlight PmenuSel ctermfg=235 ctermbg=7
 highlight! link SignColumn Statement
 
+autocmd FileType python hi! Function ctermfg=9
+
 " Plugins
 runtime ftplugin/man.vim
 call plug#begin('~/.vim/plugged')
@@ -129,3 +131,6 @@ let b:ycm_hover = { 'command': 'GetDoc', 'syntax': &filetype }
 let g:ctrlp_cmdmap = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+
+" Auto Format
+let g:formatters_python = ['black']
