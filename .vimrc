@@ -30,6 +30,7 @@ let g:sonokai_style = 'default' " default, atlantis, andromeda, maia
 let g:sonokai_better_performance = 1
 let g:sonokai_transparent_background = 2
 let g:sonokai_menu_selection_background = "green"
+let g:sonokai_disable_italic_comment = 1
 let g:sonokai_colors_override = {'red': ['#ff6d7e', '1'],
                                 \'green': ['#a2e57b', '2'],
                                 \'yellow': ['#ffed72', '3'],
