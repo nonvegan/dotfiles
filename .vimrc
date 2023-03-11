@@ -38,9 +38,9 @@ set nu relativenumber
 set scrolloff=8
 set splitbelow
 set splitright
-set wrap
+set nowrap
 set guicursor=
-set incsearch nohlsearch
+set incsearch nohlsearch ignorecase smartcase
 set noerrorbells
 set keywordprg=:Man
 
@@ -57,7 +57,8 @@ set cmdheight=1
 set confirm
 set ruler
 set mouse=a
-set updatetime=50
+set updatetime=250
+set ttimeoutlen=0
 
 " Undo/Redo
 set noswapfile
@@ -71,13 +72,15 @@ set clipboard=unnamedplus
 " Keybinds
 let mapleader=" "
 
+" Disable Ex mode
+:map Q <Nop>
+
 map Y y$
 map <Leader>s :update<CR>
 map <F2> <CR>:Man 
 map <leader>m :w<CR>:make -B<CR>
 map <C-F5> :w<CR>:make -B run<CR>
 
-set ttimeoutlen=0 " Fixes <ESC> delay using YCM
 nmap <Leader>d <plug>(YCMHover)
 nmap <Leader>q :YcmCompleter GoToInclude<CR>
 nmap <Leader>w :YcmCompleter GoToDeclaration<CR>
@@ -114,10 +117,10 @@ vnoremap <leader>p "_dP
 
 " AutoCmd
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-  au FileType * setlocal formatoptions-=cro
-  au FileType man setlocal tabstop=8 " Fix tabs caused artifacts in man pages
-  " au QuickFixCmdPost *grep* cwindow
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+    au FileType * setlocal formatoptions-=cro
+    au FileType man setlocal tabstop=8 " Fix tabs caused artifacts in man pages
+    " au QuickFixCmdPost *grep* cwindow
 endif
 
 " Auto-Completion
@@ -133,5 +136,13 @@ let g:ctrlp_cmdmap = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-" Auto Format
+" AutoFormat
+
 let g:formatters_python = ['black']
+
+" Check Syntax group
+function! SynGroup()
+    let l:s = synID(line('.'), col('.'), 1)
+    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
+command CheckSyntaxGroyp call SynGroup()
