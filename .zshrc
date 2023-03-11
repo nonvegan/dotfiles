@@ -76,10 +76,10 @@ ZSH_THEME="agnoster-custom_prompt"
 plugins=(
 	git
 	zsh-autosuggestions
-	zsh-syntax-highlighting
 	colored-man-pages
 	command-not-found
 	sudo
+    zsh-syntax-highlighting
 	)
 
 source $ZSH/oh-my-zsh.sh
