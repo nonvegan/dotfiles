@@ -15,7 +15,7 @@ Plug 'tommcdo/vim-exchange' " Exchange operations
 Plug 'tpope/vim-surround' " Surround operations
 Plug 'preservim/nerdtree' " File Tree
 Plug 'ctrlpvim/ctrlp.vim' " File searching
-Plug 'jez/vim-superman' " Man pages
+Plug 'jez/vim-superman' " Open Man pages with vim
 Plug 'zeek/vim-zeek' " Zeek syntax highligthing
 Plug 'vim-python/python-syntax' " Better python syntax
 call plug#end()
