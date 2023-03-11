@@ -1,22 +1,24 @@
 " Plugins
 runtime ftplugin/man.vim
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'sainnhe/sonokai'
-Plug 'ycm-core/YouCompleteMe'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
-Plug 'tommcdo/vim-exchange'
-Plug 'Chiel92/vim-autoformat'
-Plug 'jez/vim-superman'
-Plug 'preservim/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'zeek/vim-zeek'
-Plug 'tpope/vim-surround'
-Plug 'kshenoy/vim-signature'
+Plug 'vim-airline/vim-airline' " Status/Tab line
+Plug 'sainnhe/sonokai' " Monokai theme
+Plug 'tpope/vim-fugitive' " Git wrapper
+Plug 'airblade/vim-gitgutter' " Git Signs
+Plug 'kshenoy/vim-signature' " Mark Signs
+Plug 'ycm-core/YouCompleteMe' " Auto completion
+Plug 'dense-analysis/ale' " Linting, syntax checking, lsp
+Plug 'Chiel92/vim-autoformat' " Auto formatting
+Plug 'tpope/vim-commentary' " Auto commenting
+Plug 'jiangmiao/auto-pairs' " Auto pairing
+Plug 'tommcdo/vim-exchange' " Exchange operations
+Plug 'tpope/vim-surround' " Surround operations
+Plug 'preservim/nerdtree' " File Tree
+Plug 'ctrlpvim/ctrlp.vim' " File searching
+Plug 'jez/vim-superman' " Open Man pages with vim
+Plug 'zeek/vim-zeek' " Zeek syntax highligthing
 call plug#end()
 
-   
 " Theming
 syntax on
 
@@ -24,7 +26,7 @@ if has('termguicolors')
   set termguicolors
 endif
 
-let g:sonokai_style = 'atlantis' " default, atlantis, andromeda, maia
+let g:sonokai_style = 'default' " default, atlantis, andromeda, maia
 let g:sonokai_better_performance = 1
 let g:sonokai_transparent_background = 2
 let g:sonokai_menu_selection_background = "green"
@@ -144,9 +146,11 @@ let g:ctrlp_cmdmap = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-" AutoFormat
-
+" Auto-Format
 let g:formatters_python = ['black']
+
+" ALE
+ let g:ale_linters = {'python': ['flake8']}
 
 " Check Syntax group
 function! SynGroup()
