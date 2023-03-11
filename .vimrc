@@ -24,10 +24,18 @@ if has('termguicolors')
   set termguicolors
 endif
 
-let g:sonokai_style = 'atlantis' " Best ones: atlantis, andromeda, maia
+let g:sonokai_style = 'atlantis' " default, atlantis, andromeda, maia
 let g:sonokai_better_performance = 1
 let g:sonokai_transparent_background = 2
 let g:sonokai_menu_selection_background = "green"
+let g:sonokai_colors_override = {'red': ['#ff6d7e', '1'],
+                                \'green': ['#a2e57b', '2'],
+                                \'yellow': ['#ffed72', '3'],
+                                \'purple': ['#baa0f8', '5'],
+                                \'blue': ['#7cd5f1', '6'],
+                                \'fg': ['#f2fffc', '7'],
+                                \'orange': ['#fc9867', '172']}
+
 
 let g:airline_theme = 'sonokai'
 let g:airline_powerline_fonts = 1
