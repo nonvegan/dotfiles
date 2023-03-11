@@ -15,11 +15,14 @@ Plug 'tommcdo/vim-exchange' " Exchange operations
 Plug 'tpope/vim-surround' " Surround operations
 Plug 'preservim/nerdtree' " File Tree
 Plug 'ctrlpvim/ctrlp.vim' " File searching
-Plug 'jez/vim-superman' " Open Man pages with vim
+Plug 'jez/vim-superman' " Man pages
 Plug 'zeek/vim-zeek' " Zeek syntax highligthing
+Plug 'vim-python/python-syntax' " Better python syntax
 call plug#end()
 
+
 " Theming
+let g:python_highlight_all = 1
 syntax on
 
 if has('termguicolors')
@@ -39,10 +42,10 @@ let g:sonokai_colors_override = {'red': ['#ff6d7e', '1'],
                                 \'fg': ['#f2fffc', '7'],
                                 \'orange': ['#fc9867', '172']}
 
-
 let g:airline_theme = 'sonokai'
 let g:airline_powerline_fonts = 1
 colorscheme sonokai
+
 
 " General
 set nu relativenumber
@@ -152,6 +155,7 @@ let g:formatters_python = ['black']
 
 " ALE
  let g:ale_linters = {'python': ['flake8']}
+
 
 " Check Syntax group
 function! SynGroup()
