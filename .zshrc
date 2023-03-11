@@ -75,10 +75,11 @@ ZSH_THEME="agnoster-custom_prompt"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	zsh-autosuggestions
-	colored-man-pages
-	command-not-found
+    vi-mode
 	sudo
+    command-not-found
+    colored-man-pages
+    zsh-autosuggestions
     zsh-syntax-highlighting
 	)
 
