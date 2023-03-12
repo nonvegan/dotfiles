@@ -10,7 +10,6 @@ Plug 'ycm-core/YouCompleteMe' " Auto completion
 Plug 'dense-analysis/ale' " Linting, syntax checking, lsp
 Plug 'Chiel92/vim-autoformat' " Auto formatting
 Plug 'tpope/vim-commentary' " Auto commenting
-Plug 'jiangmiao/auto-pairs' " Auto pairing
 Plug 'tommcdo/vim-exchange' " Exchange operations
 Plug 'tpope/vim-surround' " Surround operations
 Plug 'preservim/nerdtree' " File Tree
