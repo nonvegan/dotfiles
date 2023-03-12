@@ -111,7 +111,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Ubuntu Mono
+    family: UbuntuMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -267,7 +267,7 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#282c34'
+    black:   '#273136'
     red:     '#ff6d7e'
     green:   '#a2e57b'
     yellow:  '#ffed72'
